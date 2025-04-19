@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #030216; /* Very dark background */
+    overflow: hidden; /* Allow the page to scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* Add this to make sure your React content is visible */
+/* Update the #root styling */
+#root {
+    position: relative;
+    z-index: 10; /* Higher z-index to appear above background */
+    width: 100%;
+    height: 100%;
+    display: flex;           /* Add this */
+    justify-content: center; /* Add this */
+    align-items: center;     /* Add this */
+    padding: 20px;           /* Add this */
+}
+
+.container {
+    position: absolute;
+    /* Use 100% to fill the parent (body) */
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Lower z-index to appear behind React content */
+    /* REMOVE overflow: hidden; to let blur spill out */
+}
+
+.container div {
+    position: absolute;
+    border-radius: 50%;
+    /* INCREASE BLUR RADIUS */
+    filter: blur(200px); /* Example: increased from 120px */
+    z-index: 1; /* Ensure all background divs stay behind content */
+}
+
+/* Rest of your CSS remains the same */
+.container div:nth-child(1) {
+    /* Larger size */
+    height: 150%;
+    width: 150%;
+    background-color: #00f7ff; /* Brighter cyan */
+    /* Adjust positioning to ensure coverage with larger size */
+    left: -75%; /* Approx -half of width */
+    top: -25%;
+    animation: float1 25s ease-in-out infinite alternate;
+}
+
+/* Bright Magenta (Keep relatively unchanged) */
+.container div:nth-child(2) {
+    height: 140%;
+    width: 140%;
+    background-color: #f700ff; /* Brighter magenta */
+    top: -70%;
+    right: -70%;
+    animation: float2 28s ease-in-out infinite alternate;
+}
+
+/* Deep Blue (Keep relatively unchanged) */
+.container div:nth-child(3) {
+    height: 120%;
+    width: 120%;
+    background-color: #3200c8; /* Deep blue */
+    bottom: -60%;
+    right: -30%;
+    animation: float3 30s ease-in-out infinite alternate;
+}
+
+/* Adjusted Very Dark Purple (Darkest Color) */
+.container div:nth-child(4) {
+    height: 130%;  /* Slightly smaller */
+    width: 130%;   /* Slightly smaller */
+    background-color: #240046; /* Very Dark Purple */
+    left: -40%;   /* Bring closer to center */
+    bottom: -20%;  /* Bring closer to center */
+    animation: float4 27s ease-in-out infinite alternate;
+}
+
+/* Keyframes (adjust if needed, but start by leaving them) */
+@keyframes float1 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30%, 30%); }
+}
+
+@keyframes float2 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-30%, 30%); }
+}
+
+@keyframes float3 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-30%, -30%); }
+}
+
+@keyframes float4 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30%, -30%); }
+}

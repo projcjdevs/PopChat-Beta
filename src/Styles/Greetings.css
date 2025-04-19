@@ -1,0 +1,224 @@
+.card {
+    background: rgba(255, 226, 226, 0.15); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(15px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Subtle border */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 350px;
+    overflow: hidden;
+    position: relative;
+    z-index: 11;
+    padding: 12px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Center the logo */
+    margin-bottom: 5px; /* Reduce this from whatever it was before */
+    padding-top: 10px; /* Add some padding at top */
+}
+
+.logo-container img {
+    max-width: 180px; /* Slightly smaller logo */
+    height: auto;
+}
+
+.content {
+    padding: 10px 20px; /* Reduce vertical padding */
+    text-align: left;
+    margin-top: 0; /* Remove any top margin */
+}
+
+
+.content h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: white; /* White text for better visibility */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+.content p {
+    font-size: 1em;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    line-height: 1.5;
+}
+
+
+.cta {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 15px; /* Add gap between buttons */
+}
+
+.cta button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 10px 18px; /* Increased padding for more space */
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: all 0.3s ease;
+    min-width: 120px; /* Ensure minimum width */
+    text-align: center; /* Center text */
+}
+
+.cta button:hover {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.8), rgba(147, 0, 184, 0.8));
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Buttons */
+.form-container {
+    padding: 10px 20px;
+}
+
+.form-container h2 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    color: white;
+    margin-bottom: 2px;
+    font-size: 0.9em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1em;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 15px; /* Add gap between buttons */
+}
+
+.form-actions button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 10px 18px; /* Increased padding */
+    border-radius: 50px; /* Fix: ensure consistent border-radius */
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: all 0.3s ease;
+    min-width: 100px; /* Ensure minimum width */
+    text-align: center; /* Center text */
+}
+
+.form-actions button:hover {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.8), rgba(147, 0, 184, 0.8));
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-actions .submit-btn {
+    background-color: rgba(52, 152, 219, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px; /* Match padding with other buttons */
+}
+
+.form-actions .submit-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Styling for the Google Sign-In button */
+.google-signin {
+    margin-top: 20px;
+    text-align: center; /* Center the button */
+}
+
+.google-btn {
+    background: linear-gradient(135deg, #4285F4, #a834a2); /* Google colors gradient */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    min-width: 200px; /* Ensure consistent width */
+    text-align: center;
+}
+
+.google-btn:hover {
+    background: linear-gradient(135deg, #a84234, #4285F4); /* Reverse gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Error and success messages */
+.error-message {
+    color: #ff4d4d;
+    font-size: 0.9em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.success-message {
+    color: #4caf50;
+    font-size: 0.9em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Password container for input and toggle button */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Password input field */
+.password-container input {
+    flex: 1;
+    padding-right: 40px; /* Add space for the toggle button */
+}
+
+/* Toggle password visibility button */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7); /* Subtle white color */
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: white; /* Brighten the color on hover */
+}

@@ -1,0 +1,97 @@
+.dashboard {
+    padding: 45px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.dashboard h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+button {
+    background-color: #057afd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0468d7;
+}
+
+.color-picker {
+    display: flex;
+    gap: 10px; /* Space between color circles */
+    margin-top: 10px;
+}
+
+.color-circle {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%; /* Make the buttons circular */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+
+.color-circle:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.color-circle.selected {
+    border: 1px solid white; /* Highlight the selected color */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a glow effect */
+}
+
+.avatar-picker {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Make the avatars circular */
+    cursor: pointer;
+    transition: transform 0.2s ease, border 0.2s ease;
+    border: 2px solid transparent; /* Default border */
+}
+
+.avatar:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.avatar.selected {
+    border: 3px solid #057afd; /* Highlight the selected avatar */
+    box-shadow: 0 0 10px rgba(5, 122, 253, 0.5); /* Add a glow effect */
+}
